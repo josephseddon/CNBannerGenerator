@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>CN Banner Generator</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div class="container"><form class="bannergenform">
+  <h2>CentralNotice - Banner Generator</h2>
+  <div class="divTable">
+<div class="divTableBody">
+<div class="divTableRow">
+<div class="divTableCellleft">  <label>Landing Page Link:</label></div>
+<div class="divTableCell"> <input type="text" class="form-input" id="link" value="//meta.wikimedia.org/wiki/Meta:Example"/></div>
+</div>
+<div class="divTableRow">
+<div class="divTableCellleft"<label>Does your logo have a landscape or portrait ratio?</label></div>
+<div class="divTableCell"><input type="radio" id="ratiolandscape"
+     name="logoratio" value="Landscape">
+    <label for="ratiolandscape">Landscape</label>
+
+    <input type="radio" id="ratioportrait"
+     name="logoratio" value="Portrait">
+    <label for="ratioportrait">Portrait</label>
+    
+    <input type="radio" id="ratiosquare"
+     name="logoratio" value="Square" checked="checked">
+    <label for="ratiosquare">Square</label></div>
+</div>
+<div class="divTableRow">
+<div class="divTableCellleft"<label>Commons Logo Link:</label></div>
+<div class="divTableCell"><input class="form-input" type="text" id="imagelink" value="//upload.wikimedia.org/wikipedia/commons/8/81/Wikimedia-logo.svg"/></div>
+</div>
+<div class="divTableRow">
+<div class="divTableCellleft"><label>How many rows of text do you need?</label></div>
+<div class="divTableCell"><div id="rowselecta" onclick="hideline2()"><input type="radio" id="rows1"
+     name="rows" value="1">
+    <label for="rows1">1 row</label>
+    <input type="radio" id="rows2"
+     name="rows" value="2">
+    <label for="rows2">2 rows</label></div>
+</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCellleft"><label>Is your banner multilingual</label></div>
+<div class="divTableCell"><div id="rowselecta" onclick="multilingual()"><input type="radio" id="multiyes"
+     name="multilingual" value="yes">
+    <label for="multiyes">Yes</label>
+    <input type="radio" id="multino"
+     name="multilingual" value="no">
+    <label for="multino">No</label></div>
+</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCellleft">  <label>Banner Text Line 1</label></div>
+<div class="divTableCell"><input class="form-input" type="text" id="text1" value="ONE LINE OF TEXT. IDEALLY BETWEEN 50-70 CHARACTERS"/></div>
+</div>
+<div class="divTableRow hidden" id="bannerline2">
+<div class="divTableCellleft">  <label>Banner Text Line 2</label></div>
+<div class="divTableCell"><input class="form-input" type="text" id="text2" value="ANOTHER LINE OF TEXT"/></div>
+</div>
+</div>
+</div><div class="buttons">
+<div class="button-container"><div href="#" id="1" class="cnotice-button cnotice-button1" onclick="generate_code()"><div style="
+    top: 50%;
+    transform: translate(0%, 50%);
+  ">Generate Banner Code</div></div></div>
+<div class="button-container"><div href="#" id="1" class="cnotice-button cnotice-button1" onclick="copyclipboard()"><div style="
+    top: 50%;
+    transform: translate(0%, 50%);
+  ">Copy code to clipboard</div></div></div></div>
+<div class="cnotice hidden" id="{{{banner}}}">
+  <a class="cnotice-full-banner-click external text" href="//meta.wikimedia.org/wiki/Meta:Example">
+    <div id = "cnotice-main" >
+      <div class="cnotice-logo-container">
+        <img id="cnotice-image"src="//upload.wikimedia.org/wikipedia/commons/8/81/Wikimedia-logo.svg" alt = "Banner logo" height = "55px" width = "55px">
+      </div>
+      <div class="cnotice-message-container">
+        <div class="cnotice-message" id="cnotice-message">
+          <p id="cnotice-message-p">ONE LINE OF TEXT. IDEALLY BETWEEN 50-70 CHARACTERS</p>
+        </div>
+      </div>
+    </div>
+  </a>
+  <div id="cnotice-toggle-box">
+    <a href="#" title="{{int:centralnotice-shared-hide}}" onclick="mw.centralNotice.hideBanner();return false;">
+      <img border="0" src="//upload.wikimedia.org/wikipedia/donate/a/ac/Close_oojs.png" alt="{{int:centralnotice-shared-hide}}" />
+    </a>
+  </div>
+</div>
+<div id="codecontainer"><textarea id="code" rows="25" readonly></textarea></div>
+</form></div>
+
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+  
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
